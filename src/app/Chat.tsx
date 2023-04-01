@@ -34,7 +34,7 @@ export default function Chat() {
   const [modalVisible, setModalVisible] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
 
-  const { user, isLoadingUser, token } = useUser()
+  const { user, isLoadingUser, token } = useUser();
 
   const isEmailValid = (key: string) => {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(key);
@@ -42,10 +42,10 @@ export default function Chat() {
 
   useEffect(() => {
     if (user && !isLoadingUser) {
-      setValidEmail(true)
-      setEmail(user.email)
+      setValidEmail(true);
+      setEmail(user.email);
     }
-  }, [user, isLoadingUser])
+  }, [user, isLoadingUser]);
 
   const keyModal = useMemo(
     () => (
@@ -116,7 +116,10 @@ export default function Chat() {
       const { error } = await supabaseClient.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: "http://localhost:3000",
+          emailRedirectTo:
+            process.env.APP_ENV === "staging"
+              ? "http://localhost:3000"
+              : "https://ask-james-kkuld95bb-contato-a2devcombr.vercel.app/",
         },
       });
       if (error) throw error;
