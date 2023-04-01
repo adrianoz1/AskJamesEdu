@@ -1,4 +1,5 @@
 # JamesEdu
+AI to answer questions about English
 
 ## ✨ Features
 - Auth Magic links 🪄 with supabase
@@ -9,3 +10,12 @@
 - ⚡ [Next.js](https://nextjs.org/)
 - ☁ [Cirrus](https://www.cirrus-ui.com/)
 - 🤖 [OpenAI](https://chat.openai.com/chat)
+
+## Public access
+
+- 🤹🏼‍♀️ [Ask James Edu](https://ask-james-edu.vercel.app/)
+- 📱 [Instagram](https://www.instagram.com/jamesedu.ingles/)
+
+## 📷 Preview
+
+![](./public/static/images/preview.png)
