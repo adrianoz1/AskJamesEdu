@@ -11,7 +11,7 @@ AI to answer questions about English
 - ☁ [Cirrus](https://www.cirrus-ui.com/)
 - 🤖 [OpenAI](https://chat.openai.com/chat)
 
-## Public access
+## 🖥 Public access
 
 - 🤹🏼‍♀️ [Ask James Edu](https://ask-james-edu.vercel.app/)
 - 📱 [Instagram](https://www.instagram.com/jamesedu.ingles/)
@@ -19,3 +19,8 @@ AI to answer questions about English
 ## 📷 Preview
 
 ![](./public/static/images/preview.png)
+
+## ✅ Next Steps
+- [x] Integration openAI gpt3.5-turbo
+- [x] Login with magic links supabase
+- [ ] Limit 5 questions per day
