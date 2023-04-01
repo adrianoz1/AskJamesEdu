@@ -1,0 +1,16 @@
+.hero {
+    background-image: url('/static/images/bg.png');
+}
+
+.animated.loading::after {
+    border-color: #c5459f;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+    .suggestion {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
