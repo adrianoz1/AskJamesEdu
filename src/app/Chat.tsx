@@ -117,9 +117,7 @@ export default function Chat() {
         email,
         options: {
           emailRedirectTo:
-            process.env.APP_ENV === "staging"
-              ? "http://localhost:3000"
-              : "https://ask-james-kkuld95bb-contato-a2devcombr.vercel.app/",
+            process.env.NEXT_PUBLIC_APP_REDIRECT ?? "http://localhost:3000",
         },
       });
       if (error) throw error;
@@ -136,9 +134,7 @@ export default function Chat() {
       await tryAcquire(mutex).runExclusive(
         async () => await generateReply(e, p)
       );
-    } catch (e) {
-      // Ignore already running process
-    }
+    } catch (e) {}
   };
 
   const generateReply = async (e: any, p?: string) => {
