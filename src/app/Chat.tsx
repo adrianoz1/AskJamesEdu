@@ -92,11 +92,7 @@ export default function Chat() {
                     alert(`Informe um e-mail válido!`);
                     return;
                   }
-
                   handleLogin(userEmail);
-
-                  //   setModalVisible(false);
-                  //   setValidEmail(true);
                 }}
               >
                 Salvar
@@ -156,10 +152,6 @@ export default function Chat() {
     setIsLoading(true);
     setGeneratedReply("");
 
-    const dateTime = new Date().toString();
-    const timezoneRegex = /GMT([\-\+]?\d{4})/;
-    const timeZone = timezoneRegex.exec(dateTime)![1];
-
     const response = await fetch("/api/generate", {
       method: "POST",
       headers: {
@@ -167,7 +159,7 @@ export default function Chat() {
       },
       body: JSON.stringify({
         prompt: `${p ?? promptInput}`,
-        localDateTime: `${new Date().toLocaleString()} and timezone ${timeZone}`,
+        authUID: user?.id
       }),
     });
 
