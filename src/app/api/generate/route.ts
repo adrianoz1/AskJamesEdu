@@ -31,7 +31,7 @@ export async function POST(req: Request) {
   }
 
   if (process.env.AUTO_SET_KEY === `true`) {
-    apiKey = process.env.OPENAI_API_KEY;
+    apiKey = process.env.OPENAI_API_KEY_NEW;
   }
 
   if (!apiKey) {
