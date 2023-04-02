@@ -23,4 +23,4 @@ AI to answer questions about English
 ## ✅ Next Steps
 - [x] Integration openAI gpt3.5-turbo
 - [x] Login with magic links supabase
-- [ ] Limit 5 questions per day
+- [x] Limit 5 questions per day
