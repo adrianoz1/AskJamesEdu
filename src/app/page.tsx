@@ -23,15 +23,6 @@ export default function Home() {
             </div>
 
             <p className="mx-4 text-white">
-                Made by{' '}
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://adrianoalmeida.dev"
-                    className="text-white font-bold u u-LR"
-                >
-                    Adriano Almeida
-                </a>
                 . Powered by{' '}
                 <a
                     target="_blank"
